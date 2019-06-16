@@ -4,8 +4,14 @@ Zadania z Interpretowalnego Uczenia Maszynowego
 Podsumowanie:
 [Summary](BartlomiejKrzepkowskiPD10.pdf)
 
-<object data="http://yoursite.com/the.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="http://yoursite.com/the.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="http://yoursite.com/the.pdf">Download PDF</a>.</p>
-    </embed>
-</object>
+
+function appendPdf(id, url) {
+    var $el = $('#'+id);
+    // Check whether the browser supports displaying pdf files inline (ie. without downloading them)
+    if (navigator && navigator.mimeTypes && navigator.mimeTypes['application/pdf']) {
+        // You may add extra attributes (eg. to allow transparency) or style the iframe
+        $el.html('<iframe src="'+url+'"></iframe>');
+    } else {
+        $el.html('<a href="'+url+'">Download file</a>');
+    }
+ }

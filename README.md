@@ -2,4 +2,5 @@
 Zadania z Interpretowalnego Uczenia Maszynowego
 
 Podsumowanie:
-![Summary](BartlomiejKrzepkowskiPD10.pdf)
+![Zdjecie](summary.png)
+[Plik PDF](BartlomiejKrzepkowskiPD10.pdf)
